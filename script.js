@@ -1,4 +1,4 @@
-onst menuLinks = document.querySelectorAll('.sub ul li a');
+const menuLinks = document.querySelectorAll('.sub ul li a');
 const contentArea = document.querySelector('.con');
 
 menuLinks.forEach(link => {
