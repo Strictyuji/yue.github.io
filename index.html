@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Memories For Everyone</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -15,19 +15,12 @@
   <nav class="sub">
     <h2>For</h2>
     <ul>
-      <li>
-        <a href="#" data-content="請耐心看到最後">天涯給所有人的小驚喜</a>
-      
-        <!-- 加入 memories.mp4 影片 -->
-        <video controls muted loop>
-          <source src="memories.mp4" type="video/mp4">
-          您的瀏覽器不支援影片播放。
-        </video>
-      </li>
-      <li><a href="#" data-content="給愛神的話">愛神</a></li>
-      <li><a href="#" data-content="給花花的話">花花</a></li>
-      <li><a href="#" data-content="給月月的話">月月</a></li>
-      <li><a href="#" data-content="給天涯的話">天涯</a></li>
+      <!-- 加上 data-video 指定影片檔名 -->
+      <li><a href="#" data-content="請耐心看到最後，這是特別為大家準備的回憶短片！" data-video="memories.mp4">天涯給所有人的小驚喜</a></li>
+      <li><a href="#" data-content="給愛神的話：感謝一路上的陪伴與支持！">愛神</a></li>
+      <li><a href="#" data-content="給花花的話：祝你未來的道路一切順利！">花花</a></li>
+      <li><a href="#" data-content="給月月的話：大學生活加油，保持熱情！">月月</a></li>
+      <li><a href="#" data-content="給天涯的話：願我們都能保持初心，邁向未來！">天涯</a></li>
     </ul>
   </nav>
 
@@ -37,7 +30,7 @@
   </main>
 
   <footer class="tai">
-    <p>頁腳|聯絡方式、服務項目、主要功能放置區</p>
+    <p>頁腳 | 聯絡方式、服務項目、主要功能放置區</p>
   </footer>
 
   <script src="script.js"></script>
