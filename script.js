@@ -1,17 +1,19 @@
-// 取得所有選單的 <a> 元素與內容區
 const menuLinks = document.querySelectorAll('.sub ul li a');
 const contentArea = document.querySelector('.con');
 
 menuLinks.forEach(link => {
   link.addEventListener('click', e => {
-    e.preventDefault(); // 阻止預設跳轉 behavior
+    e.preventDefault();
     
-    const title = link.textContent;
-    const newContent = link.getAttribute('data-content') || '暫無內容描述';
+    // 取得連結文字或自訂名稱
+    const name = link.textContent;
+    const newContent = link.getAttribute('data-content') || '暫無內容';
 
-    // 動態更新主內容區
+    // 若是第一項，標題簡化為「給所有人的小驚喜」，其餘顯示「給 XXX 的祝福」
+    let titleText = name === "天涯給所有人的小驚喜" ? "天涯給所有人的小驚喜" : `給 ${name} 的祝福`;
+
     contentArea.innerHTML = `
-      <h2>給 ${title} 的祝福</h2>
+      <h2>${titleText}</h2>
       <p>${newContent}</p>
     `;
   });
