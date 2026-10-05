@@ -10,7 +10,7 @@ menuLinks.forEach(link => {
 
     // 更新主內容區內容
     contentArea.innerHTML = `
-      <h2>主內容區</h2>
+      <h2>承載著滿滿祝福的一段話</h2>
       <p>${newContent}</p>
     `;
   });
