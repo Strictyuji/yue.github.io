@@ -1,20 +1,35 @@
-const menuLinks = document.querySelectorAll('.sub ul li a');
+onst menuLinks = document.querySelectorAll('.sub ul li a');
 const contentArea = document.querySelector('.con');
 
 menuLinks.forEach(link => {
   link.addEventListener('click', e => {
-    e.preventDefault();
+    e.preventDefault(); // 阻止頁面跳轉
     
-    // 取得連結文字或自訂名稱
     const name = link.textContent;
-    const newContent = link.getAttribute('data-content') || '暫無內容';
+    const newContent = link.getAttribute('data-content') || '暫無內容描述';
+    const videoSrc = link.getAttribute('data-video'); // 取得影片檔名
 
-    // 若是第一項，標題簡化為「給所有人的小驚喜」，其餘顯示「給 XXX 的祝福」
+    // 格式化標題名稱
     let titleText = name === "天涯給所有人的小驚喜" ? "天涯給所有人的小驚喜" : `給 ${name} 的祝福`;
 
+    // 檢查是否有影片，若有則生成影片 HTML
+    let videoHTML = '';
+    if (videoSrc) {
+      videoHTML = `
+        <div class="video-container">
+          <video controls autoplay muted loop>
+            <source src="${videoSrc}" type="video/mp4">
+            您的瀏覽器不支援影片播放。
+          </video>
+        </div>
+      `;
+    }
+
+    // 動態放入文字與影片
     contentArea.innerHTML = `
       <h2>${titleText}</h2>
       <p>${newContent}</p>
+      ${videoHTML}
     `;
   });
 });
