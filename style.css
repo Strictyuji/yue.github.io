@@ -53,6 +53,17 @@ footer { grid-area: footer; }
   font-size: 18px;
 }
 
+/* 讓 li 內的影片自動符合側邊欄寬度 */
+.sub li video {
+  width: 100%;          /* 自動填滿選單寬度 */
+  max-width: 100%;
+  height: auto;          /* 保持原比例 */
+  display: block;        /* 獨立成行，排在文字下方 */
+  margin-top: 10px;      /* 與上方連結文字保持間距 */
+  border-radius: 8px;    /* 圓角視覺效果 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 加上微陰影 */
+}
+
 .sub li a {
   text-decoration: none;
   color: #0056b3;
