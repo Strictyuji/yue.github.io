@@ -10,7 +10,7 @@ menuLinks.forEach(link => {
     const videoSrc = link.getAttribute('data-video'); // 取得影片檔名
 
     // 格式化標題名稱
-    let titleText = name === "天涯給所有人的小驚喜" ? "天涯給所有人的小驚喜" : `給 ${name} 的祝福`;
+    let titleText = name === "天涯給所有人的小驚喜" ? "天涯給所有人的小驚喜" : `${name} 給大家的祝福`;
 
     // 檢查是否有影片，若有則生成影片 HTML
     let videoHTML = '';
