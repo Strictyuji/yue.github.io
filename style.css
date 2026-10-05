@@ -65,6 +65,29 @@ footer { grid-area: footer; }
   color: #003366;
 }
 
+/* 主內容文字,邊框格式 */
+.con {          
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+
+  /*  放大主內容區的字體 */
+  font-size: 1.2rem;       /* 預設整體文字放大（原為 1rem / 16px，1.2rem 約為 19.2px） */
+  line-height: 1.8;        /* 增加行高，讓大字體閱讀起來更舒適 */
+}
+
+/* 如果想個別控制標題與內文大小，可以加上這兩段： */
+.con h2 {
+  font-size: 1.8rem;       /* 標題字體大小 */
+  margin-bottom: 0.8em;    /* 標題與內文之間的間距 */
+}
+
+.con p {
+  font-size: 1.25rem;      /* 段落內文字體大小 (約 20px) */
+}
+
 /* 主內容與頁腳區樣式 */
 .con, .tai {
   border: 1px solid #ddd;
