@@ -14,33 +14,33 @@ body {
   grid-template-columns: 200px 1fr;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
-  gap: 10px;
-  padding: 10px;
-  background-color: #0000;
+  gap: 15px;
+  padding: 15px;
+  background-color: #f4f4f9;
 }
 
-li {
-  margin-top: 40px;
-  margin-bottom: 80px; /* 調整數值來改變間距 */
-  font-size: 20px;
-}
+/* 網格區劃設定 */
+header { grid-area: header; }
+nav    { grid-area: nav; }
+main   { grid-area: main; }
+footer { grid-area: footer; }
 
-ul {
-  width: fit-content;  /* 或你可以寫 200px 等固定寬度 */
-  margin: 0 auto;      /* 左右自動，置中 */
-}
-
-.tit {          /* 標題文字,邊框格式*/
+/* 頁首標題樣式 */
+.tit {
   background-image: url('2.jpg');
-  background-size: cover;       
+  background-size: cover;
   background-position: center;
-  font-size: 25px;
+  font-size: 20px;
   color: #87ceeb;
-  border: 0px solid #333;
+  border-radius: 8px;
   height: 120px;
   padding: 1em;
-  border-radius: 0px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 側邊導覽列樣式 */
+.sub h2 {
+  margin-bottom: 10px;
 }
 
 .sub ul {
@@ -49,48 +49,31 @@ ul {
 }
 
 .sub li {
-  margin: 5px 0;
+  margin: 15px 0;
+  font-size: 18px;
 }
 
 .sub li a {
   text-decoration: none;
-  color: blue;
+  color: #0056b3;
   cursor: pointer;
+  transition: color 0.2s;
 }
 
 .sub li a:hover {
   text-decoration: underline;
+  color: #003366;
 }
 
-.con {          /* 主內容文字,邊框格式*/
-  border: 2px solid #333;
+/* 主內容與頁腳區樣式 */
+.con, .tai {
+  border: 1px solid #ddd;
   background-color: #fff;
-  padding: 1em;
+  padding: 1.5em;
   border-radius: 8px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.tai {          /* 底部文字,邊框格式*/
-  border: 2px solid #333;
-  background-color: #fff;
-  padding: 1em;
-  border-radius: 8px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-}
-
-header {
-  grid-area: header;
-}
-
-nav {
-  grid-area: nav;
-}
-
-main {
-  grid-area: main;
-}
-
-footer {
-  grid-area: footer;
+.tai {
   text-align: center;
 }
